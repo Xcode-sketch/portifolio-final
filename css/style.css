@@ -57,3 +57,30 @@ header {
   color: var(--destaque);
 }
 
+.container-header {
+  background-color: #0077ff;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 32px 0;
+}
+.content-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.content-image img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.content-text {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
