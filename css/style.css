@@ -20,6 +20,7 @@
     --destaque: #0077ff;
     --destaque-inverso: #66bbff;
     --fundo-card: #ffffff;
+    --tags: rgba(0, 119, 255, 0.2);
     --value:90;
 }
 
@@ -87,19 +88,57 @@ header {
   max-width: 500px;
   margin: 0 auto;
 }
-.resume {
-  margin-top: 5%;
+
+.content-text i {
+  font-size: 2em;
 }
-.resume-title {
-  display: flex;
-  gap: 7px;
-  font-size: 1.5em;
+
+.resume { 
+  margin: 24px; 
+  background-color: var(--fundo-card); 
+  width: 100%;
+  max-width: 900px; 
+  padding: 50px; 
+  display: flex; 
+  flex-direction: column; 
+  border-radius: 15px;
 }
-.resume-title i {
-  color: var(--destaque);
+.resume-media { 
+  width: 100%; 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
+.resume-title { 
+  display: flex; 
+  gap: 8px; 
+  font-size: 1.4em; 
+  align-items: center; 
+  margin-bottom: 12px; 
+}
+.resume-title i { color: var(--destaque); }
+.resume-video { 
+  position: relative; 
+  width: 100%;
+  aspect-ratio: 16/9; 
+  background: #000; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 12px rgba(0,0,0,.15); 
+}
+.resume-video iframe { 
+  position: absolute; 
+  inset: 0; 
+  width: 100%; 
+  height: 100%; 
+  border: 0; 
 }
 .content-skill {
-  margin-top: 10%;
+  margin: 24px auto;
+  background-color: var(--fundo-card);
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  padding: 50px;
 }
 .skill-title {
   display: flex;
@@ -109,11 +148,11 @@ header {
 .skill-title i {
   color: var(--destaque);
 }
-/* ================= SKILLS (custom bars) ================= */
+
 .skills-list { 
   margin-top: 24px; 
   width: 100%;
-  max-width: 520px;
+  max-width: 900px;
 }
 .skill { 
   margin-bottom: 26px; 
@@ -162,7 +201,70 @@ header {
   box-shadow: 0 0 4px rgba(0,0,0,.15) inset; 
   transition: width .8s ease;
 }
-/* Animação opcional quando quiser revelar dinamicamente */
+.content-forma {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  background-color: var(--fundo-card);
+  padding: 5px;
+  border-radius: 15px;
+}
+.forma-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.forma-title {
+  margin: 15px;
+  display: flex;
+  gap: 4px;
+  font-size: 1.5em;
+}
+.forma-title i { color: var(--destaque);}
+.card {
+  background-color: var(--fundo-principal);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  min-width: 100%;
+  --largura-barra: 5px;
+  box-shadow: inset var(--largura-barra) 0 0 0 var(--destaque);
+  transition: box-shadow .25s ease, background-color .25s ease;
+}
+.card:hover,
+.card:focus-within {
+  --largura-barra: 14px; 
+  background-color: var(--fundo-card);
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-title h6 {
+  font-size: 1.2em;
+  color: var(--destaque);
+}
+.card-content {
+  padding: 10px;
+}
+.card-content span {
+  margin: 5px;
+  background-color: var(--tags);
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 0.75em;
+}
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .skill-fill { animation: grow-skill .9s ease-out both; }
 }
