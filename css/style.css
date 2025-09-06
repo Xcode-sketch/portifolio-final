@@ -20,6 +20,7 @@
     --destaque: #0077ff;
     --destaque-inverso: #66bbff;
     --fundo-card: #ffffff;
+    --value:90;
 }
 
 body {
@@ -58,7 +59,6 @@ header {
 }
 
 .container-header {
-  background-color: #0077ff;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -70,6 +70,9 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
+  background-color: #222222;
+  border-radius: 50%;
+  border: solid #000;
 }
 .content-image img {
   height: 120px;
@@ -84,3 +87,83 @@ header {
   max-width: 500px;
   margin: 0 auto;
 }
+.resume {
+  margin-top: 5%;
+}
+.resume-title {
+  display: flex;
+  gap: 7px;
+  font-size: 1.5em;
+}
+.resume-title i {
+  color: var(--destaque);
+}
+.content-skill {
+  margin-top: 10%;
+}
+.skill-title {
+  display: flex;
+  gap: 7px;
+  font-size: 1.5em;
+}
+.skill-title i {
+  color: var(--destaque);
+}
+/* ================= SKILLS (custom bars) ================= */
+.skills-list { 
+  margin-top: 24px; 
+  width: 100%;
+  max-width: 520px;
+}
+.skill { 
+  margin-bottom: 26px; 
+}
+
+.skill-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  font-weight: 600; 
+  margin-bottom: 6px; 
+  line-height: 1.1em;
+}
+
+.skill-name { 
+  display: flex;
+  align-items:center;
+  gap: 4px; 
+}
+
+.skill-name i {
+  color: var(--destaque);
+}
+
+.skill-percent {
+  color: var(--destaque);
+  font-weight: 700;
+  font-size: .95em;
+}
+
+.skill-bar { 
+  position: relative; 
+  width: 100%; 
+  height: 8px; 
+  background: #f1f1f1; 
+  border-radius: 6px; 
+  overflow: hidden; 
+  box-shadow: inset 0 0 0 1px #e5e5e5;
+}
+.skill-fill { 
+  position: absolute; 
+  inset: 0; 
+  width: var(--p,0%); 
+  background: linear-gradient(90deg, var(--destaque) 0%, var(--destaque-inverso) 100%); 
+  border-radius: 6px; 
+  box-shadow: 0 0 4px rgba(0,0,0,.15) inset; 
+  transition: width .8s ease;
+}
+/* Animação opcional quando quiser revelar dinamicamente */
+@media (prefers-reduced-motion: no-preference) {
+  .skill-fill { animation: grow-skill .9s ease-out both; }
+}
+@keyframes grow-skill { from { width: 0; } to { width: var(--p,0%); } }

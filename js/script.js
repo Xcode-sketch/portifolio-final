@@ -1,6 +1,5 @@
 
 
-
 // Scroll suave para links de navegação
 const navLinks = document.querySelectorAll('#menu ul a.link');
 navLinks.forEach(link => {
