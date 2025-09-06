@@ -115,15 +115,15 @@ header {
 .content-text i {
   font-size: 2em;
   text-decoration: none;
-  color: inherit;
+  color: var(--destaque);
 }
 .card-content a {
-  color: inherit;
+  color: var(--destaque);
   text-decoration: none;
 }
 .content-text a:visited {
   text-decoration: none;
-  color: inherit;
+  color: var(--destaque);
 }
 
 .resume { 

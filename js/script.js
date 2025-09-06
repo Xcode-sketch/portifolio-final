@@ -8,18 +8,23 @@ function darkTheme(isdark) {
   if(isdark == true) {
     body.classList.add('dark');
     theme.innerHTML = '<a href="#"><i class="fa-solid fa-sun"></i></i></a>';
-    root.style.setProperty('--destaque', '#000000ff');
+    root.style.setProperty('--destaque', '#ffd900ff');
+    root.style.setProperty('--fundo-principal','#1f1f1fff');
+    root.style.setProperty('--fundo-card','#464646ff');
+    root.style.setProperty('--texto', '#FFFFFF');
   } else {
     body.classList.remove('dark');
     theme.innerHTML = '<a href="#"><i class="fa-solid fa-moon"></i></i></a>';
     root.style.setProperty('--destaque', '#0077ff');
+    root.style.setProperty('--fundo-principal','#f5f5f5');
+    root.style.setProperty('--fundo-card','#ffffff');
+    root.style.setProperty('--texto', '#222222');
   }
 }
 
 theme.addEventListener('click', () => {
   const isdark = body.classList.toggle('dark');
   darkTheme(isdark);
-  localStorage.setItem('theme', 'isdark' ? 'dark' : 'white');
 })
 
 // Scroll suave para links de navegação
