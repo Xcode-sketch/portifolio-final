@@ -88,22 +88,33 @@ header {
   width: 100%;
   max-width: 900px;
 }
+.weather-data {
+  font-size: 1em;
+  background-color: var(--destaque-inverso);
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  gap: 10px; 
+}
+.weather-data h2 {
+  font-size: 1.15em;
+}
+.weather-data i {
+  font-size: 1.5em;
+}
 .content-image {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
-  background-color: #222222;
-  border-radius: 50%;
-  border: solid #000;
-  width: max-content;
 }
 .content-image img {
   height: 120px;
   width: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
+  border: 4px solid var(--destaque-inverso);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .content-text {
@@ -289,7 +300,8 @@ header {
 }
 .card-tags span {
   margin: 5px;
-  background-color: var(--tags);
+  background-color: var(--destaque-inverso);
+  color: var(--texto);
   border-radius: 5px;
   padding: 4px;
   font-size: 0.75em;
@@ -348,7 +360,31 @@ header {
   font-size: 1.2em;
 }
 
-
+@media (min-width: 940px){
+  .container-header {
+    display: grid;
+    grid-template-columns: 2 40px;
+  }
+  .content-skill {
+    grid-column: 2;
+    position: sticky;
+    top: 24px;
+    margin: 0px 20px 0px 0px;
+  }
+  .content-forma,
+  .content-projects,
+  .content-image,
+  .resume,
+  .presentation {
+    grid-column: 1;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .forma-card {
+    width: 98%;
+    max-width: 1200px;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .skill-fill { animation: grow-skill .9s ease-out both; }
