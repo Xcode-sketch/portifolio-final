@@ -336,6 +336,9 @@ header {
   font-size: 2em;
   margin: 0px 0px 24px;
 }
+.card-p-title h6 {
+  color: var(--destaque);
+}
 .card-p-content {
   display: flex;
   flex-direction: column;
